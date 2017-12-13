@@ -1,0 +1,33 @@
+<div>
+<h3>Registered Students Are...</h3>
+</div>
+<br>
+<br>
+<!-- <table class="table">
+  <tbody>
+      <tr class="warning">
+          <th width="80"> Name</th><th width="80">Collegename</th><th width="80">Email</th></tr>
+          <tr  class="success" *ngFor="let details of list">
+              <td>{{details.name}}</td>
+              <td>{{details.collegename}}</td>
+              <td>{{details.email}}</td>
+              </tr>
+  </tbody>
+</table> -->
+
+<div align="center">
+  <table border="1" cellpadding="5">
+  <tr>
+  <th>Name</th>
+  <th>Collegename</th>
+  <th>Course</th>
+  <th>Email</th>
+  <th>Phoneno</th>
+  </tr>
+  <tr  class="success" *ngFor="let details of list">
+ 
+  <td>{{details.name}}</td>
+  <td>{{details.collegename}}</td>
+  <td>{{details.department}}</td>
+  <td>{{details.email}}</td>
+  <td>{{details.phoneno}}</td></tr></table></div>

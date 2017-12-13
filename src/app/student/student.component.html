@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+
+    <div class="container">
+
+        <form  class="well form-horizontal"  id="contact_form">
+            
+
+  <h2 style="text-align: center">Registration Form</h2>
+  <br>
+
+  <div class="form-group">
+    <label class="col-md-4 control-label"> Name</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input placeholder="Enter the Name" class="form-control" name="name" [(ngModel)]="stud.name" type="text">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+      <label class="col-md-4 control-label" >Gender</label> 
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <input type="radio" value="male" name="gender" [(ngModel)]="stud.gender" > Male
+      <input type="radio" value="female" name="gender" [(ngModel)]="stud.gender" > Female
+        </div>
+      </div>
+    </div>
+
+
+  <div class="form-group">
+      <label class="col-md-4 control-label" >College Name</label> 
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input  name="collegename" [(ngModel)]="stud.collegename" placeholder="Enter the College Name" class="form-control"  type="text">
+        </div>
+      </div>
+    </div>
+    
+      <div class="form-group"> 
+      <label class="col-md-4 control-label">Course</label>
+        <div class="col-md-4 selectContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+        <select name="department" [(ngModel)]="stud.department" class="form-control selectpicker">
+          <option value="">Select your Course</option>
+          <option>CSE</option>
+          <option>ECE</option>
+          <option >IT</option>
+          <option >MECH</option>
+          <option >EEE</option>
+        </select>
+      </div>
+    </div>
+    </div>
+      
+    <!-- Text input-->
+    
+    <div class="form-group">
+      <label class="col-md-4 control-label">Username</label>  
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input type="text" name="username" [(ngModel)]="stud.username" placeholder="Username" class="form-control"  >
+        </div>
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    
+    <div class="form-group">
+      <label class="col-md-4 control-label" >Password</label> 
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input type="password" name="password" [(ngModel)]="stud.password" placeholder="Password" class="form-control"  >
+        </div>
+      </div>
+    </div>
+    
+    <!-- Text input
+    
+    <div class="form-group">
+      <label class="col-md-4 control-label" >Confirm Password</label> 
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input formControlName="confirmpassword" placeholder="Confirm Password" class="form-control"  type="password">
+        </div>
+      </div>
+    </div> -->
+    
+    <!-- Text input-->
+           <div class="form-group">
+      <label class="col-md-4 control-label">E-Mail</label>  
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+      <input type="email" name="email" [(ngModel)]="stud.email" placeholder="E-Mail Address" class="form-control"  >
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- Text input-->
+           
+    <div class="form-group">
+      <label class="col-md-4 control-label">Contact No.</label>  
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+      <input type="text" name="phoneno" [(ngModel)]="stud.phoneno" placeholder="Enter your Mobile no" class="form-control" >
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-4 control-label"></label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+          <p><a routerLink="/user/studlogin" routerLinkActive="active">Already have an account</a></p>
+        </div>
+      </div>
+    </div>
+
+   
+    
+    
+
+    <!-- Button -->
+<div class="form-group">
+    <label class="col-md-4 control-label"></label>
+    <div class="col-md-4"><br>
+     <button type="submit" class="btn btn-warning" (click)="submit()">SUBMIT <span class="glyphicon glyphicon-send"></span></button>
+    </div>
+  </div>
+</form>
+</div>
+  <div>  
+    <router-outlet></router-outlet>
+  </div>
+</body>
+</html>
